@@ -23,6 +23,8 @@ function Main {
 		Log("Checking ZIP file name and version")
 		
 		LOG($zipUri)
+		$filename = Split-Path $zipUri -leaf
+		LOG($filename)
 
 		$filename = GetFileName($zipUri)
 		LOG($filename)
