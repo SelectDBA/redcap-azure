@@ -26,8 +26,8 @@ function Main {
 		$filename = Split-Path $zipUri -leaf
 		LOG($filename)
 
-		$filename = GetFileName($zipUri)
-		LOG($filename)
+		#$filename = GetFileName($zipUri)
+		#LOG($filename)
 		$filePath = "$path\$filename"
 		LOG($filepath)
         $version = $filename.Replace(".zip","")
