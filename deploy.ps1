@@ -22,13 +22,15 @@ function Main {
 		Copy-Item -Path "$path\Files\AzDeployStatus.php" -Destination "$webRoot\AzDeployStatus.php"
 		Log("Checking ZIP file name and version")
 
-		LOG($zipUri)
-		LOG("$path\$filename")
-
 		$filename = GetFileName($zipUri)
+		LOG($filename)
 		$filePath = "$path\$filename"
+		LOG($filepath)
         $version = $filename.Replace(".zip","")
+		LOG($version)
 		$dbver = $version.Replace("redcap","")
+		LOG($dbver)
+		
 
         Log("Processing $version")
 
